@@ -1,0 +1,24 @@
+# Node.js
+node_modules/
+*.log
+dist/
+build/
+.env
+*.env.local
+
+# macOS
+.DS_Store
+
+# IDEs and Editors
+.idea/
+*.swp
+*.swo
+
+# Frontend specific
+frontend/build/
+frontend/.DS_Store
+
+# Backend specific (assuming Node.js or similar)
+backend/node_modules/
+backend/dist/
+backend/.env
