@@ -18,7 +18,7 @@ const getEmployees = async (req, res, next) => {
             [searchTerm, searchTerm, searchTerm, searchTerm, parseInt(limit), parseInt(offset)]
         );
 
-        // Fetch roles for each employee
+        
         for (let emp of employees) {
             const [roles] = await pool.query(
                 `SELECT r.id, r.title
@@ -30,7 +30,7 @@ const getEmployees = async (req, res, next) => {
             emp.roles = roles;
         }
 
-        // Fetch total count
+       
         const [totalRows] = await pool.query(
             `SELECT COUNT(*) as count
              FROM Employees e
